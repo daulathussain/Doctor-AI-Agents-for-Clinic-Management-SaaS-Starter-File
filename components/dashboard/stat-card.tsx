@@ -1,9 +1,9 @@
 import React from 'react'
 
-const stat-card = () => {
+const StatCard = () => {
   return (
     <div>stat-card</div>
   )
 }
 
-export default stat-card
+export default StatCard

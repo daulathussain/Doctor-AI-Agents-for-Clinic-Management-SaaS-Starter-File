@@ -1,9 +1,3 @@
-import React from 'react'
-
-const slots = () => {
-  return (
-    <div>slots</div>
-  )
+export const slots = () => {
+  return "slots"
 }
-
-export default slots

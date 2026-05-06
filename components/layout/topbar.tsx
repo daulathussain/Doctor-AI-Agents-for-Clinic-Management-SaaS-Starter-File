@@ -1,7 +1,7 @@
 import React from 'react'
 
-const topbar = () => {
+const Topbar = () => {
   return <div>topbar</div>
 }
 
-export default topbar
+export default Topbar

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const page-header = () => {
+const PageHeader = () => {
   return (
     <div>page-header</div>
   )
 }
 
-export default page-header
+export default PageHeader

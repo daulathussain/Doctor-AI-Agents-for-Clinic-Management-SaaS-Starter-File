@@ -1,9 +1,1 @@
-import React from 'react'
-
-const route = () => {
-  return (
-    <div>route</div>
-  )
-}
-
-export default route
+export async function GET() { return new Response('OK', { status: 200 }); }

@@ -1,9 +1,9 @@
-import React from 'react'
+import { NextResponse, type NextRequest } from 'next/server';
 
-const middleware = () => {
-  return (
-    <div>middleware</div>
-  )
+export async function updateSession(request: NextRequest) {
+  return NextResponse.next({
+    request: {
+      headers: request.headers,
+    },
+  });
 }
-
-export default middleware

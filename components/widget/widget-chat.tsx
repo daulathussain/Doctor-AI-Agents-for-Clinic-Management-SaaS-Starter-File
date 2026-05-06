@@ -1,9 +1,9 @@
 import React from 'react'
 
-const widget-chat = () => {
+const WidgetChat = () => {
   return (
     <div>widget-chat</div>
   )
 }
 
-export default widget-chat
+export default WidgetChat

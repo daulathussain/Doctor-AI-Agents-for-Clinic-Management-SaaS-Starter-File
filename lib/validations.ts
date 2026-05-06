@@ -1,9 +1,3 @@
-import React from 'react'
-
-const validations = () => {
-  return (
-    <div>validations</div>
-  )
+export const validations = () => {
+  return "validations"
 }
-
-export default validations

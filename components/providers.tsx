@@ -1,7 +1,7 @@
 import React from 'react'
 
-const providers = () => {
+const Providers = () => {
   return <div>providers</div>
 }
 
-export default providers
+export default Providers
