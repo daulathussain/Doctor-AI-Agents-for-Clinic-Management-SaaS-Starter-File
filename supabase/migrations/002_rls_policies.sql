@@ -10,7 +10,7 @@ CREATE POLICY "Clinics can view their own data" ON clinics
   FOR SELECT USING (auth.uid() = id);
 
 CREATE POLICY "Clinics can update their own data" ON clinics
-  FOR UPDATE USING (auth.uid() = id);
+  FOR UPDATE USING (auth.uid() = id) WITH CHECK (auth.uid() = id);
 
 CREATE POLICY "Clinics can insert their own data" ON clinics
   FOR INSERT WITH CHECK (auth.uid() = id);
@@ -24,7 +24,7 @@ CREATE POLICY "Clinics can view their own services" ON services
   FOR SELECT USING (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can update their own services" ON services
-  FOR UPDATE USING (auth.uid() = clinic_id);
+  FOR UPDATE USING (auth.uid() = clinic_id) WITH CHECK (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can insert their own services" ON services
   FOR INSERT WITH CHECK (auth.uid() = clinic_id);
@@ -38,7 +38,7 @@ CREATE POLICY "Clinics can view their own patients" ON patients
   FOR SELECT USING (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can update their own patients" ON patients
-  FOR UPDATE USING (auth.uid() = clinic_id);
+  FOR UPDATE USING (auth.uid() = clinic_id) WITH CHECK (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can insert their own patients" ON patients
   FOR INSERT WITH CHECK (auth.uid() = clinic_id);
@@ -52,7 +52,7 @@ CREATE POLICY "Clinics can view their own appointments" ON appointments
   FOR SELECT USING (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can update their own appointments" ON appointments
-  FOR UPDATE USING (auth.uid() = clinic_id);
+  FOR UPDATE USING (auth.uid() = clinic_id) WITH CHECK (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can insert their own appointments" ON appointments
   FOR INSERT WITH CHECK (auth.uid() = clinic_id);
@@ -66,7 +66,7 @@ CREATE POLICY "Clinics can view their own ai settings" ON ai_settings
   FOR SELECT USING (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can update their own ai settings" ON ai_settings
-  FOR UPDATE USING (auth.uid() = clinic_id);
+  FOR UPDATE USING (auth.uid() = clinic_id) WITH CHECK (auth.uid() = clinic_id);
 
 CREATE POLICY "Clinics can insert their own ai settings" ON ai_settings
   FOR INSERT WITH CHECK (auth.uid() = clinic_id);
